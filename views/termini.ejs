@@ -41,7 +41,7 @@
                         <td class="text-center"> <button class="btn btn-success" data-toggle="modal"
                                 data-target="#myModal<%= termin._id %>"><%= termin.tip %></button> </td>
                         <%}else{%>
-                        <%if(currentUser.type=="admin" || profil.author.id.equals(currentUser._id)){ %>
+                        <%if(currentUser.type=="admin" || profil.author.id.equals(currentUser._id) || termin.ime == currentUser.name){ %>
                         <td class="text-center"> <button class="btn btn-danger" data-toggle="modal"
                                 data-target="#myModal<%= termin._id %>"> <%= termin.tip + " - " + termin.ime%></button>
                         </td>
